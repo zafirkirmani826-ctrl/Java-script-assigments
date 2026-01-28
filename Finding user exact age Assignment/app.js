@@ -1,0 +1,20 @@
+
+var age = prompt("Enter your birth date in YYYY-MM-DD format:");
+age = new Date(age);
+var today = new Date();
+var dob = new Date(age);
+var diff = today - dob;
+console.log("diff");
+var years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+diff -= years * (1000 * 60 * 60 * 24 * 365.25);
+var months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30.44));
+diff -= months * (1000 * 60 * 60 * 24 * 30.44);
+var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+diff -= days * (1000 * 60 * 60 * 24);
+var hours = Math.floor(diff / (1000 * 60 * 60));
+diff -= hours * (1000 * 60 * 60);
+var minutes = Math.floor(diff / (1000 * 60));
+diff -= minutes * (1000 * 60);
+var seconds = Math.floor(diff / 1000);
+alert("Your exact age is " + years + " years, " + months + " months, " + days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds.");   
+console.log("Your exact age is " + years + " years, " + months + " months, " + days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds.");
